@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="StarFood.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/fac54f0bd8.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    
+#navItem1{
+    color:#323f4b;
+    font-family:"Roboto";
+    margin-right:20px;
+    transition:all 0.3s ease-in-out;
+}
+#navItem1:hover{
+       color:red;
+       font-weight:bold;
+       transform:scale(1.3);
+}
+#navItem2{
+    color:#323f4b;
+    font-family:"Roboto";
+    margin-right:20px;
+    transition:all 0.3s ease-in-out;
+}
+#navItem2:hover{
+       color:red;
+       font-weight:bold;
+       transform:scale(1.3);
+}
+#navItem3{
+    color:#323f4b;
+    font-family:"Roboto";
+    margin-right:20px;
+    transition:all 0.3s ease-in-out;
+}
+#navItem3:hover{
+       color:red;
+       font-weight:bold;
+       transform:scale(1.3);
+}
+#navItem4{
+    color:#323f4b;
+    font-family:"Roboto";
+    margin-right:20px;
+    transition:all 0.3s ease-in-out;
+}
+#navItem4:hover{
+       color:red;
+       font-weight:bold;
+       transform:scale(1.3);
+}
+.food-logo{
+    width:120px;
+    height:120px;
+}
+.banner-section-bg-container{
+    background-image:url("https://img.freepik.com/free-photo/view-ready-eat-delicious-meal-go_23-2151431806.jpg?semt=ais_hybrid&w=740");
+    height:90vh;
+    background-size:cover;
+}
+.banner-heading{
+    color:white;
+    font-family:"Roboto";
+    font-size:50px;
+    font-weight:300;
+    padding-top:10px;
+    margin-top:50px;
+    padding-left:50px;
+    margin-left:155px;
+}
+.banner-text{
+    color:white;
+    font-family:"Roboto";
+    font-size:24px;
+    font-weight:300;
+}
+.custom-button{
+    color:white;
+    background-color:orange;
+    width:130px;
+    height:45px;
+    border-width:0;
+    border-radius:8px;
+    margin-right:10px;
+    transition:all 0.1s ease-in-out;
+}
+.custom-button:hover{
+     background: linear-gradient(to right, #f07426,#f09226);
+     transform:scale(1.05);
+     box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+.custom-outline-button{
+    color:#d0b200;
+    width:130px;
+    height:45px;
+    background-color:transparent;
+    border-width:1px;
+    border-style:solid;
+    border-color: orange;
+    border-radius:8px;
+    margin-left:10px;
+    transition:all 0.3s ease-in-out;
+}
+.custom-outline-button:hover{
+     background-color:#d0b200;
+     color:black;
+     transform:scale(1.05);
+     box-shadow:0 4px 15px rgba(208,178,0,0.4);
+}
+
+  .explore-menu-section {
+    background-color: white;
+    
+  }
+  .menu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom:30px;
+  }
+  .menu-item-image {
+    border-radius: 16px;
+  }
+  .menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+  .menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+    transition:all 0.3s ease-in-out
+  }
+ 
+  .menu-item-card {
+    border-radius: 16px;
+    transition:all 0.3s ease-in-out;
+    
+  }
+.menu-item-card:hover{
+    transform:scale(1.05);
+    background-color:orange;
+    color:red;
+    font-weight:bold;   
+}
+.menu-item-card:hover .menu-card-title{
+
+    color:black;
+    font-weight:bold;
+    
+}
+.menu-item-card:hover .menu-item-link{
+    color:red;
+    font-weight:bold;
+    
+}
+
+.footer-section {
+  background-color: #0d2436;
+}
+.footer-section-mail-id {
+  color: #959ead;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.footer-section-address {
+  color: #959ead;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+  </style>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+     <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="https://i.postimg.cc/wBXxp4bB/Yellow-and-Brown-Kitchen-Food-Logo.png" class="food-logo"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" id="navItem1" href="#wcu-section">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" id="navItem2"  href="#exploremenusection">Explore Menu</a>
+          <a class="nav-link" id="navItem3"  href="#deliverysection">Delivery & payments</a>
+          <a class="nav-link" id="navItem4"  href="#followussection">Follow us</a>
+          
+        </div>
+        
+      </div>
+     </div>
+    </nav>
+    
+    <div class="banner-section-bg-container d-flex flex-column justify-content-center">
+        <div class="text-center pt-5 ml-5">
+           <h1 class="banner-heading mb-3 m1-3">Get Delicious Food Anytime</h1>
+           <p class="banner-text mb-4 ml-3">Eat Smart and Healthy</p>
+           <button class="custom-button ml-3">View Menu</button>
+           <button class="custom-outline-button ml-3">Order Now</button>
+        </div>
+    </div>
+
+
+
+   
+
+
+      <div class="explore-menu-section pt-5 pb-5" id="exploremenusection">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="menu-section-heading">Explore Menu</h1>
+            </div>
+            <div class="col-lg-3">
+              <div class="shadow menu-item-card p-3 mb-3">
+                <img
+                  src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Non-Veg Starters</h1>
+                <a href="https://www.archanaskitchen.com/amazing-non-veg-appetizers-starters-for-your-new-year-party" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="shadow menu-item-card p-3 mb-3">
+                <img
+                  src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Veg Starters</h1>
+                <a href="https://www.spiceupthecurry.com/category/appetizers-or-starters/" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Soups</h1>
+                <a href="https://www.allrecipes.com/gallery/top-rated-soups/" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Fish & Sea food</h1>
+                <a href="" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2020-12/classic-hamburger-recipe-1024x1024.jpeg"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Fast Food</h1>
+                <a href="" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ38M0oZHbY5dAYjHO00OrZvM9U4estkKkVSQ&s"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Noodles</h1>
+                <a href="" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://ipoh.hyderabadrecipes.com.my/wp-content/uploads/2022/07/Fruit-Salad.jpg"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Salads</h1>
+                <a href="" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-item-card shadow p-3 mb-3">
+                <img
+                  src="https://previews.123rf.com/images/katekrskpic/katekrskpic1808/katekrskpic180800031/106974393-two-tasty-ice-cream-cone-close-up-tasty-ice-cream-square.jpg"
+                  class="menu-item-image w-100"
+                />
+                <h1 class="menu-card-title">Desserts</h1>
+                <a href="" class="menu-item-link">
+                  View All
+                  <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+       
+     
+  
+
+
+
+    
+    <div class="footer-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img
+              src="https://i.postimg.cc/jjPXQgzH/Yellow-and-Brown-Kitchen-Food-Logo-removebg-preview.png"
+              class="food-munch-logo"
+            />
+            <h1 class="footer-section-mail-id">orderfood@starfood.com</h1>
+            <p class="footer-section-address">
+              6/D1,Mani Nagar, Thoothukudi, Tamil Nadu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
